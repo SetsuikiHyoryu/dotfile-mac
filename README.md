@@ -1,5 +1,13 @@
 # Mac Dotfile
 
+## 绿色版程序
+
+- 本体放置于 `~/Applications/` 目录下以统一管理。
+- 执行 `ln -s <app>/bin/<item> /opt/homebrew/bin/<item>`。
+  - 这一步是创建程序的符号链接，放在这个目录是因为环境变量读取这个目录。
+  - `-s` 创建软链接，如果不加则是硬链接，这时一个底层实例会有多个别名副本。
+- 删除符号链接用 `rm` 即可，不会导致程序本体被删除。
+
 ## Nushell
 
 ### Nushell 中配置 Oh My Posh 的操作流程
